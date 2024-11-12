@@ -2,13 +2,13 @@ package co.edu.uniquindio.poo;
 
 public class Refrigerado extends Producto implements iRefrigerado{
     private String codigoAprobacion;
-    private double temperaturaRefrigeracion;
+    private double temperatura;
 
     public Refrigerado(String codigo, String nombre, double precio, String codigoAprobacion,
-            double temperaturaRefrigeracion) {
+            double temperatura) {
         super(codigo, nombre, precio);
         this.codigoAprobacion = codigoAprobacion;
-        this.temperaturaRefrigeracion = temperaturaRefrigeracion;
+        this.temperatura = temperatura;
     }
 
     public String getCodigoAprobacion() {
@@ -19,19 +19,21 @@ public class Refrigerado extends Producto implements iRefrigerado{
         this.codigoAprobacion = codigoAprobacion;
     }
 
-    public double getTemperaturaRefrigeracion() {
-        return temperaturaRefrigeracion;
+    public double getTemperatura() {
+        return temperatura;
     }
 
-    public void setTemperaturaRefrigeracion(double temperaturaRefrigeracion) {
-        this.temperaturaRefrigeracion = temperaturaRefrigeracion;
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
     }
 
     @Override
     public String toString() {
-        return "ProductoRefrigerado [codigoAprobacion=" + codigoAprobacion + ", temperaturaRefrigeracion="
-                + temperaturaRefrigeracion + "]"+super.toString();
+        return "ProductoRefrigerado [codigoAprobacion=" + codigoAprobacion + ", temperatura de refrigeracion"
+                + temperatura + "]"+super.toString();
     }
+
+    
 
 
 
